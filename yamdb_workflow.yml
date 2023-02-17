@@ -49,6 +49,7 @@ build_and_push_to_docker_hub:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/infra_actions
 deploy:
+    if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
     steps:

@@ -85,6 +85,10 @@ docker-compose exec web python manage.py collectstatic --no-input
 ```
 The project is up and running at:  [localhost](http://localhost)
 
+1) http://84.201.143.2/api/v1/
+2) http://84.201.143.2/admin
+3) http://84.201.143.2/redoc
+
 ### Developers:
 - [Iskander Ryskulov](https://github.com/IskanderRRR)
 - [Pavel Homov](https://github.com/PavelHomov)

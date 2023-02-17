@@ -10,7 +10,7 @@ services:
       - ./.env
 
   web:
-    image: iskanderrrr/infra_actions:16.02.23
+    image: iskanderrrr/infra_actions:v1
     restart: always
     volumes:
       - static_value:/app/static/

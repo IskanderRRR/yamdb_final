@@ -1,5 +1,4 @@
 import os
-import string
 from datetime import timedelta
 
 from dotenv import load_dotenv
@@ -18,7 +17,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'Optional default value')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '84.201.143.2', 'pepega.hopto.org']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '84.201.143.2', 'pepegas.ddns.net']
 
 
 # Application definition

@@ -6,6 +6,9 @@ services:
     volumes:
       - data_value:/var/lib/postgresql/data/
     restart: always
+    environment:
+    POSTGRES_USER: postgres
+    POSTGRES_PASSWORD: postgres 
     env_file:
       - ./.env
 

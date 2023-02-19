@@ -6,11 +6,12 @@ services:
     volumes:
       - data_value:/var/lib/postgresql/data/
     restart: always
-    environment:
-    POSTGRES_USER: postgres
-    POSTGRES_PASSWORD: postgres 
     env_file:
       - ./.env
+    environment:
+        POSTGRES_DB=${DB_NAME} 
+        POSTGRES_USER=${POSTGRES_USER}
+        POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
 
   web:
     image: iskanderrrr/infra_actions:v1

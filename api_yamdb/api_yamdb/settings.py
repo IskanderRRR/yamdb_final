@@ -17,7 +17,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'Optional default value')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '84.201.143.2', 'pepegas.ddns.net']
 
 
 # Application definition
@@ -69,6 +69,13 @@ WSGI_APPLICATION = 'api_yamdb.wsgi.application'
 
 
 # Database
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 DATABASES = {
     'default': {
